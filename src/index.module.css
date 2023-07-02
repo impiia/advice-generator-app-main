@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Manrope Bold';
+    src: url('./fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --background-color: hsl(218, 23%, 16%);
+    /* Цвет заднего фона */
+    --text-color: hsl(193, 38%, 86%);
+    /* Цвет текста */
+    --card-bg-color: hsl(217, 19%, 24%);
+    --neon-green: hsl(150, 100%, 66%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Manrope Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-bg-color);
+    max-width: 540px;
+    width: 540px;
+    height: 330px;
+    border-radius: 20px;
+    padding: 44px;
+}
+
+.title {
+    color: var(--neon-green);
+    margin-bottom: 22px;
+    font-size: 16px;
+    letter-spacing: 2.32px;
+}
+
+.advice {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.dice_icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(100% - 30px);
+    left: calc(50% - 30px);
+    box-shadow: none;
+}
+
+.dice_icon:hover {
+    /* Значение свечения при наведении курсора */
+    box-shadow: 0 0 10px 2px var(--neon-green);
+    cursor: pointer;
+}
+
+.divider {
+    position: absolute;
+    bottom: 70px;
+}
+
+@media screen and (max-width: 570px) {
+    .title {
+        font-size: 14px;
+    }
+
+    .advice {
+        font-size: 24px;
+    }
+
+    .card {
+       padding-left: 10px;
+       padding-right: 10px;
+    }
+}
