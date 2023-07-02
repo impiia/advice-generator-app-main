@@ -45,6 +45,7 @@ body {
     align-items: center;
     background-color: var(--card-bg-color);
     max-width: 540px;
+    min-width: 340px;
     width: 540px;
     height: 330px;
     border-radius: 20px;
@@ -90,6 +91,21 @@ body {
     bottom: 70px;
 }
 
+.dice_icon.rotate {
+    animation: rotateAnimation 1s infinite linear;
+  }
+
+  
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+  
 @media screen and (max-width: 570px) {
     .title {
         font-size: 14px;
