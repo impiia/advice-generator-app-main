@@ -35,7 +35,7 @@ function App() {
   const isMobile = useMediaQuery({ maxWidth: 1010 });
 
   return (
-    <main>
+   
     <div className={style.wrapper}>
       <div className={style.card}>
         <h1 className={style.title}>ADVICE #{adviceNumber}</h1>
@@ -52,7 +52,7 @@ function App() {
         </div>
       </div>
     </div>
-    </main>
+
   );
 }
 
